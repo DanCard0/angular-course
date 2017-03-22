@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="mainModule">
+<head>
+	<title>Ejemplo de $apply</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script>
+		angular.module("mainModule",[])
+			.controller("FirstController", function($scope){
+				$scope.nombre = "Daniel";
+				/*
+				document.querySelector("#mi_boton").addEventListener("click", function(){
+					$scope.$apply(function(){
+						$scope.nombre = "Augusto";
+					});
+				});*/
+			});
+	</script>
+</head>
+<body ng-controller="FirstController">
+	<h1>{{nombre}}</h1>
+	<button ng-click="nombre = 'Augusto'">Haz click</button>
+</body>
+</html>
